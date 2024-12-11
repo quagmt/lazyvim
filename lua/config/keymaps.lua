@@ -12,3 +12,7 @@ keymap.set("n", "<leader>a", "bi", opts)
 
 -- Enter creates new line
 keymap.set("n", "<CR>", "o<Esc>", opts)
+
+-- Swap default behavior of v_p and v_P
+keymap.set("v", "p", "P", opts)
+keymap.set("v", "P", "p", opts)
