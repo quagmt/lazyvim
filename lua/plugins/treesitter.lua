@@ -3,6 +3,7 @@ return {
     event = { "LazyFile", "VeryLazy" },
     opts = {
         ensure_installed = {
+            "rust",
             "go",
             "svelte",
         },
