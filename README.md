@@ -1,0 +1,2 @@
+- My lazy vim plugins and custom shortcuts.
+- I use this config along with [vscode-neovim](https://github.com/vscode-neovim/vscode-neovim)
