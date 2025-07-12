@@ -6,6 +6,7 @@ return {
             "rust",
             "go",
             "svelte",
+            "dart",
         },
     },
 }
