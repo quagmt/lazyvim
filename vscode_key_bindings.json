@@ -320,15 +320,6 @@
     "when": "editorTextFocus && neovim.ctrlKeysNormal.b && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
   },
   {
-    "key": "ctrl+s",
-    // "command": "workbench.action.files.save"
-    "command": "extension.multiCommand.execute",
-    "when": "editorTextFocus && neovim.init && neovim.mode == 'insert'",
-    "args": {
-      "sequence": ["workbench.action.files.save", "vscode-neovim.escape"]
-    }
-  },
-  {
     "key": "ctrl+l",
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus"
@@ -568,5 +559,32 @@
     "key": "ctrl+s",
     "command": "-vscode-neovim.send",
     "when": "editorTextFocus && neovim.ctrlKeysNormal.s && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "cmd+s",
+    "command": "-workbench.action.files.save"
+  },
+  {
+    "key": "ctrl+s",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "runCommands",
+    "when": "editorTextFocus && neovim.init && neovim.mode == 'insert'",
+    "args": {
+      "commands": ["workbench.action.files.save", "vscode-neovim.escape"]
+    }
+  },
+  {
+    "key": "ctrl+/",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+/",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]
